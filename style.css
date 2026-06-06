@@ -1,0 +1,192 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #74ebd5,
+        #9face6
+    );
+
+    transition:0.5s;
+}
+
+.container{
+
+    width:90%;
+    max-width:550px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0px 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.search-box{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:20px;
+}
+
+input{
+
+    flex:1;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+}
+
+button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:green;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+button:hover{
+
+    background:darkgreen;
+}
+
+#themeBtn{
+
+    margin-bottom:15px;
+}
+
+#weatherResult{
+
+    margin-top:25px;
+}
+
+.weather-card{
+
+    background:#f7f7f7;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    animation:fade 0.5s;
+}
+
+.weather-card h2{
+
+    margin-bottom:10px;
+}
+
+.weather-card p{
+
+    margin:10px 0;
+
+    font-size:18px;
+}
+
+.dark{
+
+    background:#121212;
+}
+
+.dark .container{
+
+    background:#1e1e1e;
+
+    color:white;
+}
+
+.dark .weather-card{
+
+    background:#2d2d2d;
+}
+
+.loader{
+
+    width:50px;
+
+    height:50px;
+
+    border:5px solid #ddd;
+
+    border-top:5px solid green;
+
+    border-radius:50%;
+
+    margin:20px auto;
+
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:600px){
+
+    .search-box{
+
+        flex-direction:column;
+    }
+
+    button{
+
+        width:100%;
+    }
+}
